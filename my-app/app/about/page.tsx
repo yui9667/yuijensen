@@ -100,10 +100,14 @@ export default function About() {
             priority={true}
           />
         </div>
-        <div className='flex flex-col justify-center'>
-          <h3 className='text-2xl mt-10 mb-8'>ヤンセン　唯</h3>
-          <p className=' mb-8 '>1996年生まれ、広島出身。</p>
-          <p className=' max-w-5xl m-2 leading-6 text-sm '>
+        <div className='flex flex-col justify-center items-center px-4 '>
+          <h3 className='text-xl md:text-2xl mt-6 md:mt-10 mb-6 md:mb-8 '>
+            ヤンセン　唯
+          </h3>
+          <p className=' mb-8 md:text-base leading-6 max-w-5xl '>
+            1996年生まれ、広島出身。
+          </p>
+          <p className=' text-sm md:text-base leading-6 max-w-5xl '>
             高校卒業後にアパレル業界へ就職し、その後ワーキングホリデー制度を利用してカナダに1年半滞在しました。
             帰国後は英語を活かしてホテルのフロント業務に従事し、再びワーキングホリデーでデンマークへ渡航。そこで現在の夫と出会ったことをきっかけに、2022年よりスウェーデンに拠点を移しました。
             デンマークの企業でマーケティングのインターンとして働く中で、
@@ -113,45 +117,41 @@ export default function About() {
         </div>
       </RootSection>
       <RootSection title='CAREER'>
-        <div className='max-w-7xl flex flex-col items-end'>
+        <div className=' flex flex-col self-end'>
           {career.map((item, index) => (
-            <div key={index} className='w-full max-w-130 px-4 ml-auto mb-5'>
-              <p>{item.date}</p>
-              <p>{item.event}</p>
+            <div key={index} className='w-full max-w-130 px-4 mb-5'>
+              <p className='leading-5'>{item.date}</p>
+              <p className='leading-5'>{item.event}</p>
               <div className='w-full border-b-2 border-current mt-2' />
             </div>
           ))}
         </div>
       </RootSection>
       <RootSection title='SKILLS'>
-        <div className='max-w-7xl flex flex-col items-end'>
+        <div className='flex flex-col self-end w-full max-w-130'>
           {skills.map((skill, index) => (
-            <div key={index} className='w-full max-w-130 px-4 ml-auto mb-5'>
-              <p className='font-bold'>{skill.title}</p>
-              <ul className='list-disc list-inside'>
-                {skill.items.map((item, itemIndex) => (
-                  <li key={itemIndex}>{item}</li>
-                ))}
-              </ul>
-              <div className='w-full border-b-2 border-current mt-2' />
+            <div key={index} className=' w-full  px-4 mb-5'>
+              <p className='font-bold mb-2'>{skill.title}</p>
+              <p>{skill.items.join(', ')}</p>
+              <div className='w-full  border-b-2 border-current mt-2' />
             </div>
           ))}
         </div>
       </RootSection>
       <RootSection title='STRENGTHS'>
-        <div className='max-w-7xl flex flex-col items-end'>
+        <div className='flex flex-col self-end'>
           {strengths.map((strength, index) => (
-            <div key={index} className='w-full max-w-130 px-4 ml-auto mb-5'>
-              <p className='font-bold'>{strength.title}</p>
-              <p>{strength.description}</p>
+            <div key={index} className='w-full max-w-130 px-4  mb-5'>
+              <p className='font-bold mb-2'>{strength.title}</p>
+              <p className='leading-6'>{strength.description}</p>
               <div className='w-full border-b-2 border-current mt-2' />
             </div>
           ))}
         </div>
       </RootSection>
       <RootSection title='INTEREST'>
-        <div className='max-w-150 mx-auto'>
-          <div className='grid grid-cols-1 mx-auto gap-4 md:grid-cols-'>
+        <div className='max-w-150 mx-auto '>
+          <div className='grid grid-cols-1 mx-auto gap-4 md:grid-cols-2'>
             {photos.map((photo, item) => (
               <div key={item} className='relative group w-full h-75'>
                 <Image
