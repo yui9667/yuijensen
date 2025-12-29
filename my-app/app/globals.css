@@ -5,6 +5,7 @@
   --color-letter: #1b3826;
   --color-accent: #e98118;
   --color-background: #e6dec3;
+  --color-contactBtn-interest: #fffdf5;
   /* 
   --h2-font-size: 2.25rem;
   --h3-font-size: 1.5rem;
@@ -12,4 +13,5 @@
 }
 body {
   background-color: var(--color-background);
+  color: var(--color-letter);
 }
