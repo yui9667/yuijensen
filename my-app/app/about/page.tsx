@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import ProfileAboutImage from '../../public/images/about-profile.jpg';
 import RootSection from '@/components/RootSection';
+import { Contact } from '@/components/ui/Contact';
 export default function About() {
   const photos = [
     {
@@ -172,6 +173,10 @@ export default function About() {
             ))}
           </div>
         </div>
+      </RootSection>
+
+      <RootSection>
+        <Contact />
       </RootSection>
     </>
   );
