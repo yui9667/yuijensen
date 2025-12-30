@@ -3,6 +3,7 @@ import ProfileAboutImage from '../../public/images/about-profile.jpg';
 import RootSection from '@/components/RootSection';
 import { Contact } from '@/components/ui/Contact';
 import { Footer } from '@/components/Footer';
+import Nav from '@/components/Nav';
 export default function About() {
   const photos = [
     {
@@ -92,6 +93,7 @@ export default function About() {
   ];
   return (
     <>
+      <Nav />
       <RootSection title='ABOUT'>
         <div className='flex flex-col items-center text-center gap-8'>
           <Image
