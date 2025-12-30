@@ -78,7 +78,10 @@ export default function Nav() {
           {/*Desktop Navigation Links */}
           <ul className='hidden md:flex gap-6 self-start max-w-350 '>
             {navItems.map((item) => (
-              <li key={item.href}>
+              <li
+                key={item.href}
+                className='hover:text-(--color-accent) transition-all duration-300'
+              >
                 <Link href={item.href}>{item.label}</Link>
               </li>
             ))}
