@@ -169,7 +169,7 @@ export default function About() {
                   className='object-cover w-full h-full duration-300 '
                 />
 
-                <div className='absolute inset-0 bg-(--color-letter)/30 group-hover:bg-(--color-letter) transition z-10' />
+                <div className='absolute inset-0 bg-(--color-primary)/30 group-hover:bg-(--color-primary) transition z-10' />
                 <div className='text-(--color-contactBtn-interest) absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-70 transition z-20 p-4'>
                   <span className='opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 text-center'>
                     {photo.label}

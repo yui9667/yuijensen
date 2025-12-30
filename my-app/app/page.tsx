@@ -1,9 +1,11 @@
-import Link from 'next/link';
+import Nav from '@/components/Nav';
+import Work from '@/components/Work';
 
 export default function Home() {
   return (
     <div>
-      <Link href='/about'>About</Link>
+      <Nav />
+      <Work />
     </div>
   );
 }

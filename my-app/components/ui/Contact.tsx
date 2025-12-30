@@ -10,7 +10,7 @@ import {
 
 export function Contact() {
   return (
-    <Card className='w-full max-w-md bg-(--color-contactBtn-background) border-2 border-(--color-letter) '>
+    <Card className='w-full max-w-md bg-(--color-section-background) border-2 border-(--color-primary) '>
       <CardHeader className='text-center'>
         <CardTitle>CONTACT</CardTitle>
         <CardDescription className='mt-2 '>
@@ -19,7 +19,7 @@ export function Contact() {
       </CardHeader>
 
       <CardFooter className='flex-col gap-2'>
-        <Button className='bg-(--color-letter) text-(--color-contactBtn-interest)'>
+        <Button className='bg-(--color-primary) text-(--color-tertiary)'>
           <Link href='/contact'>お問い合わせする</Link>
         </Button>
       </CardFooter>

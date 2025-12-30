@@ -56,19 +56,19 @@ export default function Nav() {
             aria-label='Toggle Menu'
           >
             <span
-              className={`block w-6 h-0.5 bg-(--color-letter) transition-transform duration-300 ${
+              className={`block w-6 h-0.5 bg-(--color-primary) transition-transform duration-300 ${
                 isOpen
                   ? 'rotate-45 translate-y-1.5 hover:text-(--color-accent)'
                   : ''
               }`}
             ></span>
             <span
-              className={`block w-6 h-0.5 bg-(--color-letter) transition-opacity  ${
+              className={`block w-6 h-0.5 bg-(--color-primary) transition-opacity  ${
                 isOpen ? 'opacity-0' : ''
               }`}
             ></span>
             <span
-              className={`block w-6 h-0.5 bg-(--color-letter) transition-transform duration-300 ${
+              className={`block w-6 h-0.5 bg-(--color-primary) transition-transform duration-300 ${
                 isOpen
                   ? '-rotate-45 -translate-y-1.5 hover:text-(--color-accent)'
                   : ''
