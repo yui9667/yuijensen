@@ -14,8 +14,8 @@ export default function RootSection({
     <>
       <motion.section
         className='flex flex-col mt-30 mb-20 mx-auto max-w-350 px-4 items-center'
-        initial={title ? { opacity: 0, y: 50 } : {}}
-        whileInView={title ? { opacity: 1, y: 0 } : {}}
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
       >

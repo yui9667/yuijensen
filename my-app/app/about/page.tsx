@@ -154,7 +154,10 @@ export default function About() {
         <div className='max-w-150 mx-auto '>
           <div className='grid grid-cols-1 mx-auto gap-4 md:grid-cols-2'>
             {photos.map((photo, item) => (
-              <div key={item} className='relative group w-full h-75'>
+              <div
+                key={item}
+                className='relative group w-70 h-70 md:w-75 md:h-75 '
+              >
                 <Image
                   src={photo.src}
                   alt={photo.alt}
@@ -164,7 +167,7 @@ export default function About() {
                 />
 
                 <div className='absolute inset-0 bg-(--color-letter)/30 group-hover:bg-(--color-letter) transition z-10' />
-                <div className='text-(--color-contactBtn-interest)  absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-70 transition z-20 p-4'>
+                <div className='text-(--color-contactBtn-interest) absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-70 transition z-20 p-4'>
                   <span className='opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 text-center'>
                     {photo.label}
                   </span>
