@@ -24,7 +24,7 @@ export default function Work() {
     <>
       <div className='md:max-w-350 bg-(--color-section-background)  px-4 py-20 mx-15 '>
         <RootSection title='WORKS'>
-          <div className='grid grid-cols-1 mx-auto md:gap-20 md:grid-cols-2 relative overflow-hidden  '>
+          <div className='grid grid-cols-1 mx-auto md:gap-20 md:grid-cols-2 relative overflow-hidden '>
             {projects.map((project) => (
               <Link
                 key={project.id}
@@ -48,11 +48,12 @@ export default function Work() {
                 </div>
                 <h3 className='my-2 text-xl md:text-2xl  '>{project.title}</h3>
                 <p>{project.subtitle}</p>
-                <p className=' mb-8'>{project.tool}</p>
+                <p className=' mb-3'>{project.tool}</p>
               </Link>
             ))}
-
-            <ButtonPop href='../app/works'>ALL WORKS</ButtonPop>
+            <div className='flex justify-center items-center md:col-span-2 mt-10 '>
+              <ButtonPop href='../app/works'>ALL WORKS</ButtonPop>
+            </div>
           </div>
         </RootSection>
       </div>
