@@ -23,7 +23,7 @@ export default function RootSection({
       >
         {title && (
           <>
-            <h2 className='text-3xl sm:text-4xl md:text-5xl text-(--color-accent) self-start '>
+            <h2 className='text-3xl sm:text-4xl text-(--color-accent) self-start '>
               {title}
             </h2>
             <MotionImage

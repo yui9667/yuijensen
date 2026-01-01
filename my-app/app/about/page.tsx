@@ -97,7 +97,7 @@ export default function About() {
 
       <RootSection
         title='ABOUT'
-        className='mt-15 mb-10 md:mt-30 md:mb-20 pt-28'
+        className='mt-15 mb-10 md:mt-30 md:mb-20 pt-14 md:pt-28'
       >
         <div className='flex flex-col items-center text-center gap-8'>
           <Image
@@ -129,8 +129,8 @@ export default function About() {
         <div className=' flex flex-col self-end'>
           {career.map((item, index) => (
             <div key={index} className='w-full max-w-130 px-4 mb-5'>
-              <p className='leading-5'>{item.date}</p>
-              <p className='leading-5'>{item.event}</p>
+              <p className='leading-6 mb-2'>{item.date}</p>
+              <p className='leading-6'>{item.event}</p>
               <div className='w-full border-b-2 border-current mt-2' />
             </div>
           ))}
@@ -139,10 +139,10 @@ export default function About() {
       <RootSection title='SKILLS' className='mt-15 mb-10 md:mt-30 md:mb-20'>
         <div className='flex flex-col self-end w-full max-w-130'>
           {skills.map((skill, index) => (
-            <div key={index} className=' w-full  px-4 mb-5'>
-              <p className='font-bold mb-2'>{skill.title}</p>
-              <p>{skill.items.join(', ')}</p>
-              <div className='w-full  border-b-2 border-current mt-2' />
+            <div key={index} className=' w-full px-4 mb-5'>
+              <p className='font-bold mb-2 leading-6'>{skill.title}</p>
+              <p className='leading-6'>{skill.items.join(', ')}</p>
+              <div className='w-full border-b-2 border-current mt-2' />
             </div>
           ))}
         </div>

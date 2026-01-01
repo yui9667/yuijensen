@@ -10,7 +10,7 @@ import {
 
 export function Contact() {
   return (
-    <Card className='w-full max-w-md bg-(--color-section-background) border-2 border-(--color-primary) '>
+    <Card className='w-full max-w-md mx-auto bg-(--color-section-background) border-2 border-(--color-primary) '>
       <CardHeader className='text-center'>
         <CardTitle>CONTACT</CardTitle>
         <CardDescription className='mt-2 '>

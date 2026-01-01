@@ -13,7 +13,7 @@ export default function Work() {
               {works.map((work) => (
                 <Link
                   key={work.id}
-                  href={`../app/works/${work.id}`}
+                  href={`/work/${work.id}`}
                   className='block group'
                 >
                   <div className='relative overflow-hidden '>
