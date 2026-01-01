@@ -2,7 +2,7 @@ import Image from 'next/image';
 import ProfileAboutImage from '../../public/images/about-profile.jpg';
 import RootSection from '@/components/RootSection';
 import { Contact } from '@/components/ui/Contact';
-import { Footer } from '@/components/Footer';
+import Footer from '@/components/Footer';
 import Nav from '@/components/Nav';
 export default function About() {
   const photos = [
@@ -94,7 +94,11 @@ export default function About() {
   return (
     <>
       <Nav />
-      <RootSection title='ABOUT'>
+
+      <RootSection
+        title='ABOUT'
+        className='mt-15 mb-10 md:mt-30 md:mb-20 pt-28'
+      >
         <div className='flex flex-col items-center text-center gap-8'>
           <Image
             src={ProfileAboutImage}
@@ -120,7 +124,8 @@ export default function About() {
           </p>
         </div>
       </RootSection>
-      <RootSection title='CAREER'>
+
+      <RootSection title='CAREER' className='mt-15 mb-10 md:mt-30 md:mb-20'>
         <div className=' flex flex-col self-end'>
           {career.map((item, index) => (
             <div key={index} className='w-full max-w-130 px-4 mb-5'>
@@ -131,7 +136,7 @@ export default function About() {
           ))}
         </div>
       </RootSection>
-      <RootSection title='SKILLS'>
+      <RootSection title='SKILLS' className='mt-15 mb-10 md:mt-30 md:mb-20'>
         <div className='flex flex-col self-end w-full max-w-130'>
           {skills.map((skill, index) => (
             <div key={index} className=' w-full  px-4 mb-5'>
@@ -142,7 +147,7 @@ export default function About() {
           ))}
         </div>
       </RootSection>
-      <RootSection title='STRENGTHS'>
+      <RootSection title='STRENGTHS' className='mt-15 mb-10 md:mt-30 md:mb-20'>
         <div className='flex flex-col self-end'>
           {strengths.map((strength, index) => (
             <div key={index} className='w-full max-w-130 px-4  mb-5'>
@@ -153,7 +158,7 @@ export default function About() {
           ))}
         </div>
       </RootSection>
-      <RootSection title='INTEREST'>
+      <RootSection title='INTEREST' className='mt-15 mb-10 md:mt-30 md:mb-20'>
         <div className='max-w-150 mx-auto '>
           <div className='grid grid-cols-1 mx-auto gap-4 md:grid-cols-2'>
             {photos.map((photo, item) => (

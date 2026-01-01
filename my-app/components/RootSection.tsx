@@ -6,14 +6,16 @@ const MotionImage = motion.create(Image);
 export default function RootSection({
   children,
   title = '',
+  className = '',
 }: {
   children?: React.ReactNode;
   title?: string;
+  className?: string;
 }) {
   return (
     <>
       <motion.section
-        className='flex flex-col mt-30 mb-20 mx-auto max-w-350 px-4 items-center'
+        className={`flex flex-col mx-auto max-w-350 px-4 items-center ${className}`}
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}

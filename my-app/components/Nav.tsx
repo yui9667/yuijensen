@@ -34,7 +34,7 @@ export default function Nav() {
   return (
     <>
       <nav
-        className={`fixed top-0 z-50 w-full px-6 py-4 bg-(--color-background)   ${
+        className={`fixed top-0 z-50 w-full px-6 py-4  bg-(--color-background)   ${
           isScroll
             ? 'bg-opacity-90 backdrop-blur-md shadow-md transition-all duration-300'
             : 'bg-opacity-100 shadow-none '
@@ -103,7 +103,6 @@ export default function Nav() {
           ))}
         </ul>
       </nav>
-      <div></div>
     </>
   );
 }
