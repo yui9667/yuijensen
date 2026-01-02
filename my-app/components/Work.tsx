@@ -21,7 +21,7 @@ export default function Work() {
                       src={work.imageSrc}
                       alt={work.title}
                       width={300}
-                      height={200}
+                      height={300}
                       className='transition-transform duration-300 group-hover:scale-105 border border-(--color-primary) '
                     />
                     {/*Overlay*/}
