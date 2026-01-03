@@ -8,7 +8,7 @@ export default function ButtonPop({
   children: string;
 }) {
   return (
-    <div className='text-center my-10 '>
+    <div className='text-center my-3'>
       {' '}
       <Link href={href}>
         <div className='relative inline-block'>

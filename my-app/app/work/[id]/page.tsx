@@ -6,12 +6,17 @@ import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 import ButtonPop from '@/components/ui/ButtonPop';
 import { Contact } from '@/components/ui/Contact';
+import WorkList from '@/components/Work';
+
 export default async function WorkDetail({
   params,
 }: {
   params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
+  const relatedWorks = works
+    .filter((work) => work.id !== Number(id))
+    .slice(0, 2);
   const work = works.find((work) => work.id === Number(id));
   if (!work) {
     return (
@@ -100,6 +105,9 @@ export default async function WorkDetail({
           <ButtonPop href='../app/works'>ALL WORKS</ButtonPop>
         </div>
       </RootSection>
+
+      <WorkList workProps={relatedWorks} />
+
       <RootSection
         className='
       sm:py-16 md:py-20'

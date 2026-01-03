@@ -1,16 +1,20 @@
 import RootSection from './RootSection';
 import Image from 'next/image';
 import Link from 'next/link';
-import { works } from '@/data/work';
-//import ButtonPop from './ui/ButtonPop';
-export default function Work() {
+import { Work, works } from '@/data/work';
+import ButtonPop from './ui/ButtonPop';
+type WorkListProps = {
+  workProps: Work[];
+  showBtn?: boolean;
+};
+export default function WorkList({ workProps, showBtn }: WorkListProps) {
   return (
     <>
-      <div className=' max-w-350 mx-auto pt-30 md:pt-40 '>
-        <div className=' bg-(--color-section-background) border border-(--color-primary) mx-4 mb-10 md:mt-20 md:mb-20 '>
+      <div className=' max-w-300 mx-auto pt-10 md:pt-20 '>
+        <div className=' bg-(--color-section-background) border border-(--color-primary) mx-4 mb-5 md:mt-10 md:mb-10 '>
           <RootSection title='WORKS' className='my-10  md:mb-20'>
-            <div className='grid grid-cols-1 mx-auto relative overflow-hidden md:grid-cols-2  md:gap-20 lg:gap-40  '>
-              {works.map((work) => (
+            <div className='grid grid-cols-1 mx-auto relative overflow-hidden md:grid-cols-2  md:gap-20 lg:gap-20  '>
+              {workProps.map((work) => (
                 <Link
                   key={work.id}
                   href={`/work/${work.id}`}
@@ -22,7 +26,7 @@ export default function Work() {
                       alt={work.title}
                       width={300}
                       height={300}
-                      className='transition-transform duration-300 group-hover:scale-105 border border-(--color-primary) '
+                      className='transition-transform duration-300 group-hover:scale-105 border border-(--color-primary) md:w-110 md:h-auto '
                     />
                     {/*Overlay*/}
                     <div className='absolute inset-0 bg-(--color-primary)/60 opacity-0 group-hover:opacity-100 transition flex items-center justify-center duration-300'>
@@ -36,9 +40,12 @@ export default function Work() {
                   <p className=' mb-3'>{work.tool}</p>
                 </Link>
               ))}
-              {/* <div className='flex justify-center items-center md:col-span-2  '>
-                <ButtonPop href='../app/works'>ALL WORKS</ButtonPop>
-              </div> */}
+
+              {showBtn && (
+                <div className='flex justify-center items-center md:col-span-2  '>
+                  <ButtonPop href='/work'>ALL WORKS</ButtonPop>
+                </div>
+              )}
             </div>
           </RootSection>
         </div>

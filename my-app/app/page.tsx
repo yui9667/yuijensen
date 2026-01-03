@@ -1,7 +1,7 @@
 'use client';
 import Nav from '@/components/Nav';
 import RootSection from '@/components/RootSection';
-import Work from '@/components/Work';
+import WorkList from '@/components/Work';
 import Footer from '@/components/Footer';
 import { Contact } from '@/components/ui/Contact';
 import Image from 'next/image';
@@ -9,11 +9,15 @@ import { Dela_Gothic_One } from 'next/font/google';
 import { motion } from 'framer-motion';
 import ButtonPop from '@/components/ui/ButtonPop';
 import Letter from '@/components/ui/Letter';
+import { works } from '@/data/work';
 const dela = Dela_Gothic_One({
   weight: '400',
   subsets: ['latin'],
 });
+
 export default function Home() {
+  const worksFeatured = works.filter((work) => work.isFeatured).slice(0, 4);
+  console.log(worksFeatured.length);
   return (
     <div>
       <Nav />
@@ -51,35 +55,37 @@ export default function Home() {
           />
         </motion.div>
       </section>
-      <Work />
+      <WorkList workProps={worksFeatured} showBtn={true} />
 
       <Letter />
 
-      <RootSection title='ABOUT' className='sm:py-20 md:py-24 '>
-        <div className='flex flex-col justify-center items-center max-w-350 w-full p-4 md:flex-row md:gap-20 md:px-20 '>
-          <Image
-            className='md:w-75 md:h-75'
-            src='/images/profile.png'
-            alt='プロフィール写真'
-            width={200}
-            height={200}
-          />
-          <div className=' text-center  md:text-start '>
-            <h3 className='text-xl md:text-2xl mt-6 mb-2  '>ヤンセン　唯</h3>
-            <h4 className='text-lg mb-6'>Jensen Yui</h4>
+      <div className='max-w-300 w-full mx-auto'>
+        <RootSection title='ABOUT' className='sm:py-20 md:py-24  '>
+          <div className='flex flex-col justify-center items-center max-w-300 w-full p-4 md:flex-row md:gap-20 md:px-20 '>
+            <Image
+              className='md:w-75 md:h-75'
+              src='/images/profile.png'
+              alt='プロフィール写真'
+              width={200}
+              height={200}
+            />
+            <div className=' text-center  md:text-start '>
+              <h3 className='text-xl md:text-2xl mt-6 mb-2  '>ヤンセン　唯</h3>
+              <h4 className='text-lg mb-6'>Jensen Yui</h4>
 
-            <p> 1996年生まれ、広島出身。</p>
-            <p className='leading-7'>
-              高校卒業後にアパレルとホテル業で経験を積み、3カ国でワーキングホリデーを経験。
-              2023年にUXデザインに興味を持ち独学を開始し、2024年からスウェーデンの職業学校でフルスタックを学び、2025年に卒業。
-              現在はWebデザイナーとして就職活動中です。
-            </p>
-            <div className='flex justify-center items-center md:col-span-2  '>
-              <ButtonPop href='/about'>READ MORE</ButtonPop>
+              <p> 1996年生まれ、広島出身。</p>
+              <p className='leading-7'>
+                高校卒業後にアパレルとホテル業で経験を積み、3カ国でワーキングホリデーを経験。
+                2023年にUXデザインに興味を持ち独学を開始し、2024年からスウェーデンの職業学校でフルスタックを学び、2025年に卒業。
+                現在はWebデザイナーとして就職活動中です。
+              </p>
+              <div className='flex justify-center items-center md:col-span-2  '>
+                <ButtonPop href='/about'>READ MORE</ButtonPop>
+              </div>
             </div>
           </div>
-        </div>
-      </RootSection>
+        </RootSection>
+      </div>
       <RootSection className='sm:py-16 md:py-20'>
         <Contact />
       </RootSection>
