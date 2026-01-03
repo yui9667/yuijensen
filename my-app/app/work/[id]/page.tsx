@@ -34,7 +34,7 @@ export default async function WorkDetail({
   return (
     <>
       <Nav />
-      <RootSection className=' mb-10 mt-30 md:mb-20 pt-14 md:pt-28'>
+      <RootSection className=' pt-30 md:pt-40 '>
         <div className='flex flex-col justify-self-start items-start max-w-350 w-full'>
           <h2 className='text-xl md:text-2xl font-bold mb-4'>{work.title}</h2>
 
@@ -82,7 +82,7 @@ export default async function WorkDetail({
           </div>
           <div className='flex flex-col lg:flex-row md:justify-between max-w-250 w-full px-8 mb-10'>
             <p className='pb-3'>使用ツール</p>
-            <p className='pb-2 border-b border-(--color-primary) max-w-200 w-full'>
+            <p className='pb-2 border-b border-(--color-primary) max-w-200 w-full '>
               {' '}
               {work.tool}
             </p>
@@ -94,13 +94,16 @@ export default async function WorkDetail({
           alt={work.title}
           width={1000}
           height={400}
-          className='border border-(--color-primary)'
+          className='border border-(--color-primary) sm:my-20 md:my-24'
         />
         <div className='flex justify-start items-start md:col-span-2 max-w-350 w-full '>
           <ButtonPop href='../app/works'>ALL WORKS</ButtonPop>
         </div>
       </RootSection>
-      <RootSection>
+      <RootSection
+        className='
+      sm:py-16 md:py-20'
+      >
         <Contact />
       </RootSection>
 

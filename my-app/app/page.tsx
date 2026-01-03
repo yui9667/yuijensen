@@ -8,7 +8,7 @@ import Image from 'next/image';
 import { Dela_Gothic_One } from 'next/font/google';
 import { motion } from 'framer-motion';
 import ButtonPop from '@/components/ui/ButtonPop';
-import Letter from '@/components/Letter';
+import Letter from '@/components/ui/Letter';
 const dela = Dela_Gothic_One({
   weight: '400',
   subsets: ['latin'],
@@ -52,36 +52,35 @@ export default function Home() {
         </motion.div>
       </section>
       <Work />
-      <RootSection>
-        <Letter />
-        <RootSection
-          title='ABOUT'
-          className='mt-15 mb-10 md:mt-30 md:mb-20 pt-14 md:pt-28'
-        >
-          <div className='flex flex-col justify-center items-center max-w-350 w-full border border-(--color-primary) p-4 bg-(--color-section-background) md:flex-row md:gap-20 md:p-20 '>
-            <Image
-              className='lg:h-100 lg:w-100'
-              src='/images/profile.png'
-              alt='プロフィール写真'
-              width={300}
-              height={300}
-            />
-            <div className=' text-center  md:text-start '>
-              <h3 className='text-xl md:text-2xl mt-6 mb-2  '>ヤンセン　唯</h3>
-              <h4 className='text-lg mb-6'>Jensen Yui</h4>
 
-              <p> 1996年生まれ、広島出身。</p>
-              <p className='leading-7'>
-                高校卒業後にアパレルとホテル業で経験を積み、3カ国でワーキングホリデーを経験。
-                2023年にUXデザインに興味を持ち独学を開始し、2024年からスウェーデンの職業学校でフルスタックを学び、2025年に卒業。
-                現在はWebデザイナーとして就職活動中です。
-              </p>
-              <div className='flex justify-center items-center md:col-span-2  '>
-                <ButtonPop href='/about'>READ MORE</ButtonPop>
-              </div>
+      <Letter />
+
+      <RootSection title='ABOUT' className='sm:py-20 md:py-24 '>
+        <div className='flex flex-col justify-center items-center max-w-350 w-full p-4 md:flex-row md:gap-20 md:px-20 '>
+          <Image
+            className='md:w-75 md:h-75'
+            src='/images/profile.png'
+            alt='プロフィール写真'
+            width={200}
+            height={200}
+          />
+          <div className=' text-center  md:text-start '>
+            <h3 className='text-xl md:text-2xl mt-6 mb-2  '>ヤンセン　唯</h3>
+            <h4 className='text-lg mb-6'>Jensen Yui</h4>
+
+            <p> 1996年生まれ、広島出身。</p>
+            <p className='leading-7'>
+              高校卒業後にアパレルとホテル業で経験を積み、3カ国でワーキングホリデーを経験。
+              2023年にUXデザインに興味を持ち独学を開始し、2024年からスウェーデンの職業学校でフルスタックを学び、2025年に卒業。
+              現在はWebデザイナーとして就職活動中です。
+            </p>
+            <div className='flex justify-center items-center md:col-span-2  '>
+              <ButtonPop href='/about'>READ MORE</ButtonPop>
             </div>
           </div>
-        </RootSection>
+        </div>
+      </RootSection>
+      <RootSection className='sm:py-16 md:py-20'>
         <Contact />
       </RootSection>
       <Footer />

@@ -6,8 +6,8 @@ import { works } from '@/data/work';
 export default function Work() {
   return (
     <>
-      <div className=' max-w-350 mx-auto pt-28 '>
-        <div className=' bg-(--color-section-background) border border-(--color-primary) mx-4 mt-15 mb-10 md:mt-30 md:mb-20 '>
+      <div className=' max-w-350 mx-auto pt-30 md:pt-40 '>
+        <div className=' bg-(--color-section-background) border border-(--color-primary) mx-4 mb-10 md:mt-20 md:mb-20 '>
           <RootSection title='WORKS' className='my-10  md:mb-20'>
             <div className='grid grid-cols-1 mx-auto relative overflow-hidden md:grid-cols-2  md:gap-20 lg:gap-40  '>
               {works.map((work) => (

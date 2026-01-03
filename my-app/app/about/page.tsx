@@ -4,6 +4,7 @@ import RootSection from '@/components/RootSection';
 import { Contact } from '@/components/ui/Contact';
 import Footer from '@/components/Footer';
 import Nav from '@/components/Nav';
+import Size from '@/components/Size';
 export default function About() {
   const photos = [
     {
@@ -95,11 +96,8 @@ export default function About() {
     <>
       <Nav />
 
-      <RootSection
-        title='ABOUT'
-        className='mt-15 mb-10 md:mt-30 md:mb-20 pt-14 md:pt-28'
-      >
-        <div className='flex flex-col items-center text-center gap-8'>
+      <RootSection title='ABOUT' className='p-16 md:p-20 pt-30 md:pt-40 flex '>
+        <div className='flex flex-col items-center text-center gap-8 '>
           <Image
             src={ProfileAboutImage}
             alt='Profile of myself with buildings'
@@ -125,7 +123,7 @@ export default function About() {
         </div>
       </RootSection>
 
-      <RootSection title='CAREER' className='mt-15 mb-10 md:mt-30 md:mb-20'>
+      <RootSection title='CAREER' className='sm:p-16 md:p-20 '>
         <div className=' flex flex-col self-end'>
           {career.map((item, index) => (
             <div key={index} className='w-full max-w-130 px-4 mb-5'>
@@ -136,7 +134,7 @@ export default function About() {
           ))}
         </div>
       </RootSection>
-      <RootSection title='SKILLS' className='mt-15 mb-10 md:mt-30 md:mb-20'>
+      <RootSection title='SKILLS' className='sm:p-16 md:p-20'>
         <div className='flex flex-col self-end w-full max-w-130'>
           {skills.map((skill, index) => (
             <div key={index} className=' w-full px-4 mb-5'>
@@ -147,7 +145,7 @@ export default function About() {
           ))}
         </div>
       </RootSection>
-      <RootSection title='STRENGTHS' className='mt-15 mb-10 md:mt-30 md:mb-20'>
+      <RootSection title='STRENGTHS' className='sm:p-16 md:p-20'>
         <div className='flex flex-col self-end'>
           {strengths.map((strength, index) => (
             <div key={index} className='w-full max-w-130 px-4  mb-5'>
@@ -158,7 +156,7 @@ export default function About() {
           ))}
         </div>
       </RootSection>
-      <RootSection title='INTEREST' className='mt-15 mb-10 md:mt-30 md:mb-20'>
+      <RootSection title='INTEREST' className='sm:p-16 md:p-20'>
         <div className='max-w-150 mx-auto '>
           <div className='grid grid-cols-1 mx-auto gap-4 md:grid-cols-2'>
             {photos.map((photo, item) => (
@@ -186,7 +184,7 @@ export default function About() {
         </div>
       </RootSection>
 
-      <RootSection>
+      <RootSection className='sm:p-16 md:p-20'>
         <Contact />
       </RootSection>
 

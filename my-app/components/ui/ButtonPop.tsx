@@ -18,7 +18,7 @@ export default function ButtonPop({
       absolute inset-0
       bg-(--color-accent)
       rounded-full
-      translate-x-1 translate-y-1
+      translate-x-0.5 translate-y-0.5
       z-0
       '
           />

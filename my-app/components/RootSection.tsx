@@ -29,7 +29,7 @@ export default function RootSection({
             <MotionImage
               src={Line}
               alt='Underline of text'
-              width={800}
+              width={500}
               className='mb-20 self-start  '
               initial={title ? { opacity: 0, x: '-100%' } : {}}
               whileInView={title ? { opacity: 1, x: 0 } : {}}
