@@ -3,7 +3,7 @@ import Nav from '@/components/Nav';
 import RootSection from '@/components/RootSection';
 import WorkList from '@/components/Work';
 import Footer from '@/components/Footer';
-import { Contact } from '@/components/ui/Contact';
+//import { Contact } from '@/components/ui/Contact';
 import Image from 'next/image';
 import { Dela_Gothic_One } from 'next/font/google';
 import { motion } from 'framer-motion';
@@ -79,7 +79,7 @@ export default function Home() {
                 2023年にUXデザインに興味を持ち独学を開始し、2024年からスウェーデンの職業学校でフルスタックを学び、2025年に卒業。
                 現在はWebデザイナーとして就職活動中です。
               </p>
-              <div className='flex justify-center items-center md:col-span-2  '>
+              <div className='flex justify-center items-center   '>
                 <ButtonPop href='/about'>READ MORE</ButtonPop>
               </div>
             </div>
@@ -87,7 +87,9 @@ export default function Home() {
         </RootSection>
       </div>
       <RootSection className='sm:py-16 md:py-20'>
-        <Contact />
+        {/*
+           <Contact />
+           */}
       </RootSection>
       <Footer />
     </div>

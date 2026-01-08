@@ -16,6 +16,7 @@
 body {
   background-color: var(--color-background);
   color: var(--color-primary);
-  font-family: 'Noto Serif', serif;
+  font-family: 'Noto Sans', serif;
+  font-weight: 500;
   font-optical-sizing: auto;
 }

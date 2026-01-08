@@ -1,10 +1,10 @@
 import Image from 'next/image';
 import ProfileAboutImage from '../../public/images/about-profile.jpg';
 import RootSection from '@/components/RootSection';
-import { Contact } from '@/components/ui/Contact';
+//import { Contact } from '@/components/ui/Contact';
 import Footer from '@/components/Footer';
 import Nav from '@/components/Nav';
-import Size from '@/components/Size';
+//import Size from '@/components/Size';
 export default function About() {
   const photos = [
     {
@@ -184,8 +184,10 @@ export default function About() {
         </div>
       </RootSection>
 
-      <RootSection className='sm:p-16 md:p-20'>
-        <Contact />
+      <RootSection className='sm:py-16 md:py-20'>
+        {/*
+           <Contact />
+           */}
       </RootSection>
 
       <Footer />

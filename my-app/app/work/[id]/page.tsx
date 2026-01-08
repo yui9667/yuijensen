@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 import ButtonPop from '@/components/ui/ButtonPop';
-import { Contact } from '@/components/ui/Contact';
+//import { Contact } from '@/components/ui/Contact';
 import WorkList from '@/components/Work';
 
 export default async function WorkDetail({
@@ -101,18 +101,15 @@ export default async function WorkDetail({
           height={400}
           className='border border-(--color-primary) sm:my-20 md:my-24'
         />
-        <div className='flex justify-start items-start md:col-span-2 max-w-350 w-full '>
-          <ButtonPop href='../app/works'>ALL WORKS</ButtonPop>
+        <div className='flex justify-center items-center md:col-span-2 max-w-350 w-full mb-10 md:mb-20 '>
+          <ButtonPop href='/work'>ALL WORKS</ButtonPop>
         </div>
       </RootSection>
 
-      <WorkList workProps={relatedWorks} />
-
-      <RootSection
-        className='
-      sm:py-16 md:py-20'
-      >
-        <Contact />
+      <RootSection className='sm:py-16 md:py-20'>
+        {/*
+       <Contact />
+       */}
       </RootSection>
 
       <Footer />

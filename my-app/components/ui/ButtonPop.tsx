@@ -9,16 +9,15 @@ export default function ButtonPop({
 }) {
   return (
     <div className='text-center my-3'>
-      {' '}
       <Link href={href}>
         <div className='relative inline-block'>
           {/* Accent layer */}
           <div
             className='
       absolute inset-0
-      bg-(--color-accent)
+      bg-(--color-primary)
       rounded-full
-      translate-x-0.5 translate-y-0.5
+      translate-x-0.2 translate-y-0.2
       z-0
       '
           />
@@ -30,8 +29,8 @@ export default function ButtonPop({
           z-10
       rounded-full
       px-8 py-3
-      bg-(--color-primary)
-      text-(--color-tertiary)
+      bg-(--color-accent)
+      text-(--color-primary)
       -translate-y-1
       hover:-translate-y-1.5
       active:translate-y-0

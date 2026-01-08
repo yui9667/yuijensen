@@ -5,7 +5,7 @@ import React, { useEffect } from 'react';
 const navItems = [
   { href: '/about', label: 'ABOUT' },
   { href: '/work', label: 'WORK' },
-  { href: '/contact', label: 'CONTACT' },
+  // { href: '/contact', label: 'CONTACT' },
 ];
 export default function Nav() {
   const [isOpen, setIsOpen] = React.useState(false);

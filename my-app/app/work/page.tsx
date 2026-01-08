@@ -1,9 +1,10 @@
 import Nav from '@/components/Nav';
 import Work from '@/components/Work';
 import Footer from '@/components/Footer';
-import RootSection from '@/components/RootSection';
-import { Contact } from '@/components/ui/Contact';
+//import RootSection from '@/components/RootSection';
+//import { Contact } from '@/components/ui/Contact';
 import { works } from '@/data/work';
+import RootSection from '@/components/RootSection';
 
 export default function Works() {
   return (
@@ -11,8 +12,11 @@ export default function Works() {
       <Nav />
       <Work workProps={works} />
       <RootSection className='sm:py-16 md:py-20'>
-        <Contact />
+        {/*
+       <Contact />
+       */}
       </RootSection>
+
       <Footer />
     </div>
   );

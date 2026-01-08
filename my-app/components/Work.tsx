@@ -1,7 +1,7 @@
 import RootSection from './RootSection';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Work, works } from '@/data/work';
+import { Work } from '@/data/work';
 import ButtonPop from './ui/ButtonPop';
 type WorkListProps = {
   workProps: Work[];
